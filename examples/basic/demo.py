@@ -12,15 +12,17 @@ from continy.builder import ContainerBuilder
 if __name__ == "__main__":
     # Create sample files first
     create_sample_files()
-    
+
     # Run examples
     container1 = example_programmatic_creation()
     container2 = example_file_based_creation()
-    
+
     # List containers
     print("\n=== Available containers ===")
     ConTiny.list_containers()
-    
+
     print("\nTo run containers:")
     print("continy run --name my-data-env")
-    print("continy run --name my-data-env --command 'jupyter notebook --ip=0.0.0.0 --allow-root'")
+    print(
+        "continy run --name my-data-env --command 'jupyter notebook --ip=0.0.0.0 --allow-root'"
+    )
