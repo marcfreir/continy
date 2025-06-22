@@ -2,6 +2,8 @@ import json
 from typing import Dict, List, Optional
 from .core import ConTiny
 
+from .config import ConfigParser, ContainerConfig
+
 
 class ContainerBuilder:
     """Helper class to build containers from configuration files"""

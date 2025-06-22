@@ -1,0 +1,27 @@
+{
+  "name": "data-science-env",
+  "base_distro": "ubuntu:20.04",
+  "python_version": "3.9",
+  "packages": [
+    "git",
+    "curl",
+    "vim",
+    "htop",
+    "tree",
+    "build-essential",
+    "libssl-dev",
+    "libffi-dev"
+  ],
+  "files": {
+    "./requirements.txt": "/workspace/requirements.txt",
+    "./notebook.ipynb": "/workspace/notebook.ipynb",
+    "./data/": "/workspace/data/"
+  },
+  "environment": {
+    "PYTHONPATH": "/workspace",
+    "JUPYTER_ENABLE_LAB": "yes",
+    "JUPYTER_PORT": "8888"
+  },
+  "working_dir": "/workspace",
+  "entrypoint": ["/bin/bash"]
+}
