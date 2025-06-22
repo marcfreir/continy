@@ -21,17 +21,17 @@ The framework creates isolated environments using:
 
 ```bash
 # Create from config file
-python3 simple_container.py create --file container.conf
-python3 simple_container.py build --file container.conf
+python3 continy.py create --file container.conf
+python3 continy.py build --file container.conf
 
 # Run container
-python3 simple_container.py run --name my-python-env
+python3 continy.py run --name my-python-env
 
 # Start Jupyter in container
-python3 simple_container.py run --name my-python-env --command "jupyter notebook --ip=0.0.0.0 --allow-root"
+python3 continy.py run --name my-python-env --command "jupyter notebook --ip=0.0.0.0 --allow-root"
 
 # List containers
-python3 simple_container.py list
+python3 continy.py list
 ```
 
 ## Key Advantages Over Docker/Singularity:
@@ -41,14 +41,5 @@ python3 simple_container.py list
 3. **Lightweight**: Uses existing OS instead of full virtualization
 4. **Python-First**: Built specifically for Python/Jupyter workflows
 5. **Educational**: Easy to understand and modify
-
-## Limitations & Next Steps:
-
-This is a foundational version. For production use, we are going to consider the fpllowing:
-[] Real process isolation (Linux namespaces)
-[] Better security (user namespaces)
-[] Network isolation
-[] Resource limits (cgroups)
-[] Image layering and sharing
 
 ConTiny gives you a solid starting point that's much simpler than Docker while still providing the core containerization benefits you need for Python development and Jupyter notebooks!
