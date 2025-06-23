@@ -43,3 +43,5 @@ python3 continy.py list
 5. **Educational**: Easy to understand and modify
 
 ConTiny gives you a solid starting point that's much simpler than Docker while still providing the core containerization benefits you need for Python development and Jupyter notebooks!
+
+> Status: On-going --> under development
